@@ -4,51 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Gabriel Meier Martins</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
         }
-        .container {
-            width: 80%;
-            margin: 20px auto;
+        .container-custom {
+            margin-top: 20px;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #1e1e1e;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
         }
         h1, h2, h3 {
-            color: #333;
+            color: #bb86fc;
         }
-        p {
-            line-height: 1.6;
-            color: #555;
-        }
-        .contact-info, .objective, .experience, .education, .skills {
-            margin-bottom: 20px;
-        }
-        .contact-info a {
-            color: #1a73e8;
+        .contact-info a, .container-custom a {
+            color: #03dac6;
             text-decoration: none;
         }
-        .contact-info a:hover {
+        .contact-info a:hover, .container-custom a:hover {
             text-decoration: underline;
         }
         .experience-item, .education-item {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         ul li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.container-custom').hide().fadeIn(1000);
+            $('h2').hover(function(){
+                $(this).animate({fontSize: '2em'}, 300);
+            }, function(){
+                $(this).animate({fontSize: '1.5em'}, 300);
+            });
+        });
+    </script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-custom">
         <h1>Gabriel Meier Martins</h1>
         <div class="contact-info">
             <p>Brasileiro, 23 anos</p>
@@ -57,12 +61,16 @@
             <p>E-mail: <a href="mailto:meiermartins.gabriel@gmail.com">meiermartins.gabriel@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/gabriel-meier-4689a2189/" target="_blank">Gabriel Meier Martins</a></p>
         </div>
+    </div>
 
+    <div class="container-custom">
         <div class="objective">
             <h2>Objetivo</h2>
             <p>Busco uma oportunidade na área de tecnologia, onde possa aplicar e expandir meus conhecimentos em desenvolvimento web, suporte técnico e gestão de projetos, contribuindo para o crescimento da empresa e aprimorando minhas habilidades profissionais.</p>
         </div>
+    </div>
 
+    <div class="container-custom">
         <div class="experience">
             <h2>Experiência Profissional</h2>
             <div class="experience-item">
@@ -96,7 +104,9 @@
                 </ul>
             </div>
         </div>
+    </div>
 
+    <div class="container-custom">
         <div class="education">
             <h2>Formação</h2>
             <div class="education-item">
@@ -108,7 +118,9 @@
                 <p>[CEEP – Pedro Boaretto Neto – Cascavel – PR, 2016 ~ 2019, concluído]</p>
             </div>
         </div>
+    </div>
 
+    <div class="container-custom">
         <div class="skills">
             <h2>Qualificações e Atividades Profissionais</h2>
             <ul>
@@ -124,5 +136,6 @@
             </ul>
         </div>
     </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
